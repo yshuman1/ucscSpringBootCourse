@@ -10,10 +10,63 @@ paths:
       responses:
         200:
           description: Successful response
-  /theatres:
+  /theaters:
     get:
-      description: Returns a list of all theatres
+      description: Returns a list of all theaters
       responses:
         200:
           description: Successful response
-        
+  /movies/{filterby}:
+    get:
+      description: Return a list of all movies filtered by parameter
+      parameters:
+        - name: filterby
+          in: path 
+          type: string
+          required: true 
+          
+      responses:
+        200:
+          description: Returns a list of all movies which contain paramater
+  /theaters/{filterby}:
+    get:
+      description: Return a list of all theaters filtered by parameter
+      parameters:
+        - name: filterby
+          in: path 
+          type: string
+          required: true 
+          
+      responses:
+        200:
+          description: Returns a list of all theaters which contain 
+  
+  /movies/findByTheater:
+    get:
+      description: "Finds movies by theater"
+      operationId: "findPetsByStatus"
+      parameters:
+      - name: "theater"
+        in: "query"
+        description: "theater values that need to be considered for filter"
+        required: true
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "Amc"
+          - "Cinelux"
+          - "Cinemark"
+          default: "Amc"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/movies/findByTheater"
+        400:
+          description: "Invalid value"
+  
+    
