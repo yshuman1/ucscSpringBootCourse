@@ -43,55 +43,83 @@ paths:
   
   /movies/findByTheater:
     get:
-      description: "Finds movies by theater"
+      description: lists all movies playing at a theater
       parameters:
-      - name: "theater"
-        in: "query"
-        description: "theater values that need to be considered for filter"
+      - name: theater
+        in: query
+        description: theater values that need to be considered for filter
         required: true
-        type: "array"
+        type: array
         items:
-          type: "string"
+          type: string
           enum:
-          - "Amc"
-          - "Cinelux"
-          - "Cinemark"
-          default: "Amc"
-        collectionFormat: "multi"
+          - Amc
+          - Cinelux
+          - Cinemark
+          default: Amc
+        collectionFormat: multi
       responses:
         200:
-          description: "success"
+          description: success
           schema:
-            type: "array"
+            type: array
             items:
-              $ref: "#/movies/findByTheater"
+              $ref: #/movies/findByTheater
         400:
-          description: "Invalid value"
+          description: Invalid value
   /theaters/findByMovie:
     get:
-      description: "Finds theaters by movie"
+      description: lists all theaters playing a specific movie
       parameters:
-      - name: "movie"
-        in: "query"
-        description: "movie values that need to be considered for filter"
+      - name: movie
+        in: query
+        description: movie values that need to be considered for filter
         required: true
-        type: "array"
+        type: array
         items:
-          type: "string"
+          type: string
           enum:
-          - "Casablanca"
-          - "Toy Story"
-          - "Jaws"
-          default: "Jaws"
-        collectionFormat: "multi"
+          - Casablanca
+          - Toy Story
+          - Jaws
+          default: Jaws
+        collectionFormat: multi
       responses:
         200:
-          description: "success"
+          description: success
           schema:
-            type: "array"
+            type: array
             items:
-              $ref: "#/theaters/findByMovie"
+              $ref: #/theaters/findByMovie
         400:
-          description: "Invalid value"
+          description: Invalid value
+   
+   //todo:how do you specify a time range?
+   /movies/findBytime:
+    get:
+      description: returns all movies playing between in a time range
+      parameters:
+      - name: time
+        in: query
+        description: time values that need to be considered for filter
+        required: true
+        type: array
+        items:
+          type: string
+          enum:
+          - Casablanca
+          - Toy Story
+          - Jaws
+          default: Jaws
+        collectionFormat: multi
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: #/theaters/findByMovie
+        400:
+          description: Invalid value
   
     
