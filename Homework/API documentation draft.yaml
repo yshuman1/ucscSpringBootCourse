@@ -1,0 +1,19 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: MovieSite API
+  description: An API for the MovieSite
+paths:
+  /movies:
+    get:
+      description: Returns a list of all movies              
+      responses:
+        200:
+          description: Successful response
+  /theatres:
+    get:
+      description: Returns a list of all theatres
+      responses:
+        200:
+          description: Successful response
+        
