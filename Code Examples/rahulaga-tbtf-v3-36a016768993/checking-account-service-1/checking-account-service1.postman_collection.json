@@ -1,0 +1,103 @@
+{
+	"variables": [],
+	"info": {
+		"name": "checking-account-service1",
+		"_postman_id": "3987a25c-8772-8a0e-134b-641df92b186a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/checking/123",
+			"request": {
+				"url": "http://localhost:8090/checking/123",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/checking",
+			"request": {
+				"url": "http://localhost:8090/checking",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 123,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/mappings",
+			"request": {
+				"url": "http://localhost:8090/mappings",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 123,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/env",
+			"request": {
+				"url": "http://localhost:8090/env",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 123,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

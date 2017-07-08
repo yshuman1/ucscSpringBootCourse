@@ -1,0 +1,55 @@
+{
+	"variables": [],
+	"info": {
+		"name": "jsp-servlet",
+		"_postman_id": "2c7092cb-46de-970c-8e6b-e409422b9a08",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello Servlet",
+			"request": {
+				"url": "http://localhost:8080/jsp-servlet/hello",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Hello Servlet with Param",
+			"request": {
+				"url": "http://localhost:8080/jsp-servlet/hello?name=foo",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Hello JSP",
+			"request": {
+				"url": "http://localhost:8080/jsp-servlet/hello.jsp?name=foo",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Mix JSP",
+			"request": {
+				"url": "http://localhost:8080/jsp-servlet/mix.jsp",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

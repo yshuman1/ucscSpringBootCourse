@@ -1,0 +1,61 @@
+{
+	"variables": [],
+	"info": {
+		"name": "checking-account-service2",
+		"_postman_id": "7eaea751-29c8-7f05-c6be-ceb4e3cf4054",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9080/checking - FAIL",
+			"request": {
+				"url": "http://localhost:9090/checking",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 123098937092359,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9080/checking - SUCCESS",
+			"request": {
+				"url": "http://localhost:9090/checking",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 1,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

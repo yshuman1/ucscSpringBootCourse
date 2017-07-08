@@ -1,0 +1,120 @@
+{
+	"variables": [],
+	"info": {
+		"name": "user-service1",
+		"_postman_id": "7e78e403-309d-3749-a2a6-35035adf5e9c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/users/123",
+			"request": {
+				"url": "http://localhost:8080/users/123",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 123,\n  \"firstName\": \"foo\",\n  \"lastName\": \"bar\",\n  \"pin\": \"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/env",
+			"request": {
+				"url": "http://localhost:8080/env",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 123,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/mappings",
+			"request": {
+				"url": "http://localhost:8080/mappings",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ownerId\": 123,\n  \"currency\": \"USD\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

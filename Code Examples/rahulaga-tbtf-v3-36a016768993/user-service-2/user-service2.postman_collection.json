@@ -1,0 +1,70 @@
+{
+	"variables": [],
+	"info": {
+		"name": "user-service2",
+		"_postman_id": "882123f8-4a37-bdba-b551-5864605984d4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9080/users",
+			"request": {
+				"url": "http://localhost:9080/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 123,\n  \"firstName\": \"foo\",\n  \"lastName\": \"bar\",\n  \"pin\": \"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9080/users/123",
+			"request": {
+				"url": "http://localhost:9080/users/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9080/users",
+			"request": {
+				"url": "http://localhost:9080/users?firstName=fool&lastName=bar",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
