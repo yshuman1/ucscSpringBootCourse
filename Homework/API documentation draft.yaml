@@ -44,7 +44,6 @@ paths:
   /movies/findByTheater:
     get:
       description: "Finds movies by theater"
-      operationId: "findPetsByStatus"
       parameters:
       - name: "theater"
         in: "query"
@@ -66,6 +65,32 @@ paths:
             type: "array"
             items:
               $ref: "#/movies/findByTheater"
+        400:
+          description: "Invalid value"
+  /theaters/findByMovie:
+    get:
+      description: "Finds theaters by movie"
+      parameters:
+      - name: "movie"
+        in: "query"
+        description: "movie values that need to be considered for filter"
+        required: true
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "Casablanca"
+          - "Toy Story"
+          - "Jaws"
+          default: "Jaws"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/theaters/findByMovie"
         400:
           description: "Invalid value"
   
